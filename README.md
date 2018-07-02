@@ -16,7 +16,7 @@ npm install --save atlas-seq-matcher
 
 If you are iterating through a `Buffer` or `String`, you might want to know whether or not the current character code completes a sequence you are interested in capturing.
 
-For example, I'm writing an HTML parser and I need to detect a closing style or script tag without polluting the parser with extra logic. This `SeqMatcher` is fast and only keeps the last seen character code in memory.
+For example, I'm writing an HTML parser and I need to detect a closing style or script tag without polluting the parser with extra logic. This `SeqMatcher` uses a trie because it is the obvious data structure for this problem.  I still have not compared this to the original implementation in terms of speed.
 
 ## examples
 

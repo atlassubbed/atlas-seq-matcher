@@ -2,6 +2,6 @@
 
 Global substring matcher that accepts one character code at a time.
 
-[![Travis](https://img.shields.io/travis/[username]/[repo].svg)](https://travis-ci.org/[username]/[repo])
+[![Travis](https://img.shields.io/travis/atlassubbed/atlas-seq-matcher.svg)](https://travis-ci.org/atlassubbed/atlas-seq-matcher)
 
 ---

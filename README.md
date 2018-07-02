@@ -36,19 +36,5 @@ const matcher = SeqMatcher("</script>");
 
 #### performance with trie
 
-I didn't test the equivalent trie implemention of `SeqMatcher` yet, but I'm certain it will be slower than the current implementation, since each invocation of `matcher.found` will result in an object key lookup, which is slower than char code lookups and setting/reading two local integers. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
+I'm certain this implementation will be slower than the implementation on the master branch, since each invocation of `matcher.found` will result in an object key lookup, which is slower than char code lookups and setting/reading two local integers. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
 
-A concise trie implementation would be something like: 
-
-```javascript
-...
-module.exports = str => {
-  ...
-  let node;
-  const head = new Trie(str), reset = () => {node = head};
-  return reset(), {
-    found: c => !!(node = node[c] || head).isEnd && !reset(),
-    reset
-  }
-}
-```

@@ -47,7 +47,7 @@ module.exports = str => {
   let node;
   const head = new Trie(str), reset = () => {node = head};
   return reset(), {
-    found: c => (node = node[c] || head).isEnd && !reset(),
+    found: c => !!(node = node[c] || head).isEnd && !reset(),
     reset
   }
 }

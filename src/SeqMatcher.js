@@ -6,7 +6,7 @@ module.exports = str => {
   const head = Trie(str)
   let node = head;
   return {
-    found: c => !!(node = node[c] || head).isEnd && !!(node = head),
+    found: c => !!((node = node[c] || head).isEnd && (node = head)),
     reset: () => !!(node = head)
   }
 }

@@ -36,4 +36,4 @@ const matcher = SeqMatcher("</script>");
 
 #### performance with trie
 
-This implementation is 3 times slower than the implementation on the master branch, since each invocation of `matcher.found` will result in an couple object key lookups, which is slower than char code lookups and setting/reading a local integer. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
+This implementation is 4 times slower than the implementation on the master branch, since each invocation of `matcher.found` will result in an couple object key lookups, which is slower than char code lookups and setting/reading a local integer. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.

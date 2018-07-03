@@ -36,6 +36,6 @@ const matcher = SeqMatcher("</script>");
 
 #### performance with trie
 
-The trie implementation of the `SeqMatcher` is slower than the current implementation by a factor 3, since each invocation of `matcher.found` will result in an extra object key lookup, which is slower than char code lookups and setting/reading a local integer. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
+The trie implementation of the `SeqMatcher` is slower than the current implementation by a factor 4, since each invocation of `matcher.found` will result in an extra object key lookup, which is slower than char code lookups and setting/reading a local integer. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
 
 A concise trie implementation can be found in the [trie-implementation](https://github.com/atlassubbed/atlas-seq-matcher/tree/trie-implementation) branch.

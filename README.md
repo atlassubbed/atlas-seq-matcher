@@ -16,7 +16,7 @@ npm install --save atlas-seq-matcher
 
 If you are iterating through a `Buffer` or `String`, you might want to know whether or not the current character code completes a sequence you are interested in capturing.
 
-For example, I'm writing an HTML parser and I need to detect a closing style or script tag without polluting the parser with extra logic. This `SeqMatcher` is fast and only keeps the last seen character code in memory.
+For example, I'm writing an HTML parser and I need to detect a closing style or script tag without polluting the parser with extra logic. This `SeqMatcher` is fast and only keeps the current position in the string in memory.
 
 ## examples
 
@@ -36,6 +36,6 @@ const matcher = SeqMatcher("</script>");
 
 #### performance with trie
 
-I didn't test the equivalent trie implemention of `SeqMatcher` yet, but I'm certain it will be slower than the current implementation, since each invocation of `matcher.found` will result in an object key lookup, which is slower than char code lookups and setting/reading two local integers. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
+The trie implementation of the `SeqMatcher` is slower than the current implementation, since each invocation of `matcher.found` will result in an extra object key lookup, which is slower than char code lookups and setting/reading a local integer. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
 
 A concise trie implementation can be found in the [trie-implementation](https://github.com/atlassubbed/atlas-seq-matcher/tree/trie-implementation) branch.

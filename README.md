@@ -124,3 +124,7 @@ This solution fails to capture script-end tags that lie on the boundary. When wo
 The trie implementation of the `SeqMatcher` looks cleaner, but is slower than the current implementation by a factor 4, since each invocation of `matcher.found` will result in an extra object key lookup, which is slower than char code lookups and setting/reading a local integer. Recall that `matcher.found` is being called on the order of a million times for a typical HTML document, and maybe billions of times for continuous HTML streaming.
 
 A concise trie implementation can be found in the [trie-implementation](https://github.com/atlassubbed/atlas-seq-matcher/tree/trie-implementation) branch.
+
+#### since-char sequences
+
+If you're trying to match a single character, don't use `SeqMatcher`, just do it at top level, since it's a *single* character. While this module passes tests for single-char sequences, it has not been optimized for them.

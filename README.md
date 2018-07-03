@@ -127,4 +127,4 @@ A concise trie implementation can be found in the [trie-implementation](https://
 
 #### since-char sequences
 
-If you're trying to match a single character, don't use `SeqMatcher`, just do it at top level, since it's a *single* character. While this module passes tests for single-char sequences, it has not been optimized for them.
+If you're trying to match a single character (e.g. `SeqMatcher("a")`), don't use `SeqMatcher`, just do it at top level, since it's a *single* character. While this module passes tests for single-char sequences, it has not been optimized for them.

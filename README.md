@@ -78,7 +78,7 @@ const matcher = /<\/script>/g
 myHtml.match(matcher).length;
 ```
 
-This example above becomes useless when you are dealing with hundreds of megabytes of HTML. 
+This example becomes useless when you are dealing with hundreds of megabytes of HTML. 
 
 #### what about using regexp in a stream?
 

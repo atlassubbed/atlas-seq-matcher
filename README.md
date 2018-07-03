@@ -58,7 +58,7 @@ module.exports = class ScriptEndStream extends Transform {
 
 Using the stream is pretty easy, we'll call it `Parser`:
 
-```
+```javascript
 const Parser = require("./ScriptEndStream")
 const htmlStream = fs.createReadStream("./index.html");
 htmlStream.pipe(new Parser()).on("data", event => {

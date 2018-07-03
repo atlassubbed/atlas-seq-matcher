@@ -73,9 +73,7 @@ The above example is somewhat contrived, as there are better ways to "count" the
 ```javascript
 ...
 const myHtml = fs.readFileSync("./index.html");
-
 const matcher = /<\/script>/g
-
 // number of script-end tags
 myHtml.match(matcher).length;
 ```

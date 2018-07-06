@@ -125,6 +125,6 @@ The trie implementation of the `SeqMatcher` looks cleaner, but is slower than th
 
 A concise trie implementation can be found in the [trie-implementation](https://github.com/atlassubbed/atlas-seq-matcher/tree/trie-implementation) branch.
 
-#### since-char sequences
+#### single-char sequences
 
 If you're trying to match a single character (e.g. `SeqMatcher("a")`), don't use `SeqMatcher`, just do it at top level, since it's a *single* character. While this module passes tests for single-char sequences, it has not been optimized for them.

@@ -49,5 +49,14 @@ describe("SeqMatcher", function(){
     it("should find all instances of the substring", function(){
       expectMatch("bbatlasbbatlasatlasbbb", "atlas", [6, 13, 18])
     })
+    it("should not find the substring if the state was manually reset", function(){
+      const body = "atlasbbbbbbbbbbbbbbbbb"
+      const matcher = SeqMatcher("atlas");
+      for (let i = 0; i < body.length; i++){
+        code = body.charCodeAt(i);
+        if (i === 3) matcher.reset();
+        expect(matcher.found(code)).to.equal(false, `expected no match at index ${i}`)
+      }
+    })
   })
 })

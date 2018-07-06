@@ -117,6 +117,15 @@ This seems nice, but it fails to capture matches which have been split at the ch
 
 This solution fails to capture script-end tags that lie on the boundary. When working with streams or are already iterating through characters, just use `SeqMatcher`. Since `SeqMatcher` works on the character level, it is chunk-agnostic and does not run into boundary problems.
 
+#### resetting the matcher
+
+If you need to flush your stream or do some cleanup, you can manually reset the internal position of the matcher, which effectively erases its memory of what it has seen:
+
+```
+...
+matcher.reset()
+```
+
 ## caveats
 
 #### performance with trie

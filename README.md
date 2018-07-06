@@ -121,7 +121,7 @@ This solution fails to capture script-end tags that lie on the boundary. When wo
 
 If you need to flush your stream or do some cleanup, you can manually reset the internal position of the matcher, which effectively erases its memory of what it has seen:
 
-```
+```javascript
 ...
 matcher.reset()
 ```

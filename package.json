@@ -1,6 +1,6 @@
 {
   "name": "atlas-seq-matcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Global substring matcher that accepts one character code at a time.",
   "scripts": {
     "test-server": "mocha --colors --watch --recursive './test/**/*.test.js'",

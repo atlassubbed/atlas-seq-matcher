@@ -1,15 +1,17 @@
 # atlas-seq-matcher
 
+Fork of [atlas-seq-matcher](https://github.com/atlassubbed/atlas-seq-matcher) without pinning to node 10.
+
 Global substring matcher that accepts one character code at a time.
 
-[![Travis](https://img.shields.io/travis/atlassubbed/atlas-seq-matcher.svg)](https://travis-ci.org/atlassubbed/atlas-seq-matcher)
+[![Travis](https://img.shields.io/travis/BonnierNews/atlas-seq-matcher.svg)](https://travis-ci.org/BonnierNews/atlas-seq-matcher)
 
 ---
 
 ## install
 
 ```
-npm install --save atlas-seq-matcher
+npm install --save @bonniernews/atlas-seq-matcher
 ```
 
 ## why
@@ -27,7 +29,7 @@ In this example, we'll [create an object transform stream](https://nodejs.org/ap
 ```javascript
 // ./ScriptEndStream.js
 const { Transform } = require("stream")
-const SeqMatcher = require("atlas-seq-matcher")
+const SeqMatcher = require("@bonniernews/atlas-seq-matcher")
 
 // implements transform stream API
 module.exports = class ScriptEndStream extends Transform {

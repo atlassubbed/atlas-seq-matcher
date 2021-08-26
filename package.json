@@ -1,6 +1,6 @@
 {
-  "name": "atlas-seq-matcher",
-  "version": "1.0.2",
+  "name": "@bonniernews/atlas-seq-matcher",
+  "version": "1.0.3",
   "description": "Global substring matcher that accepts one character code at a time.",
   "scripts": {
     "test-server": "mocha --colors --watch --recursive './test/**/*.test.js'",

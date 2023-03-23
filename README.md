@@ -4,8 +4,7 @@ Fork of [atlas-seq-matcher](https://github.com/atlassubbed/atlas-seq-matcher) wi
 
 Global substring matcher that accepts one character code at a time.
 
-[![Travis](https://img.shields.io/travis/BonnierNews/atlas-seq-matcher.svg)](https://travis-ci.org/BonnierNews/atlas-seq-matcher)
-
+[![Built latest](https://github.com/BonnierNews/atlas-seq-matcher/actions/workflows/build-latest.yaml/badge.svg)](https://github.com/BonnierNews/atlas-seq-matcher/actions/workflows/build-latest.yaml)
 ---
 
 ## install
